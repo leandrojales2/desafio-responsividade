@@ -10,17 +10,6 @@ header {
     position: relative;
     justify-content: center;
 }
-
-.img-section {
-    width: 379px;
-    height: 252px;
-}
-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .img-header {
     width: 1fr;
     height: 506px;
@@ -31,8 +20,8 @@ section {
     font-size: 18px;
     position: absolute;
     z-index: 1;
-    color: white;
     top: 10%;
+    color: white;
     left: 30px;
 }
 .header-content{
@@ -44,23 +33,22 @@ section {
     position: absolute;
     z-index: 3;
     width: 381px;
+    height: 310px;
     top: 35%;
 
 }
-p {
+.header-content p {
     color: white;
     margin-bottom: 40px;
     text-align: left;
 }
-
 button {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 18px;
-    padding: 15px;
     border-radius: 30px;
     width: 381px;
-    margin-bottom: 20px;
+    height: 54px;
 }
 .button-abrir-discord {
     top: 72%;
@@ -75,29 +63,134 @@ button {
     border: none;
 }
 .crie-seu-espaco {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-area: img-1 text-1;
     width: 1fr;
-    height: 560px;
-}
-.facil-encontrar {
-    width: 1fr;
-    height: 507px;
-    background: #F6F6F6;
-}
-.para-poucos {
-    width: 1fr;
-    height: 560px;
-}
-.conexao-confiavel {
-    width: 1fr;
-    height: 560px;
-    background: #F6F6F6;
+    height: 573px;
 }
 .section-img-1 {
-    width: 379px;
+    width: 1fr;
+    height: 252px;
+    display: flex;
+    justify-items: center;
+    padding: 20px;
+}
+.section-img-1 img{
+    width: 1fr;
+    height: 252px;
+}
+.section-text-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section-text-1 h2 {
+    width: 370px;
+    height: 99px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21.79px;
+    width: 378px;
+    height: 88px;
+}
+.facil-encontrar {
+    background: #F6F6F6;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-area: img-2 text-2;
+    width: 1fr;
+    height: 507px;
+}
+.section-img-2 {
+    width: 1fr;
+    height: 252px;
+    display: flex;
+    justify-items: center;
+    padding: 20px;
+}
+.section-img-2 img{
+    width: 1fr;
     height: 252px;
 }
 .section-text-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section-text-2 h2 {
+    width: 379px;
+    height: 33px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.para-poucos {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-area: img-3 text-3;
     width: 1fr;
+    height: 507px;
+}
+.section-img-3 {
+    width: 1fr;
+    height: 252px;
+    display: flex;
+    justify-items: center;
+    padding: 20px;
+}
+.section-img-3 img{
+    width: 1fr;
+    height: 252px;
+}
+.section-text-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section-text-3 h2 {
+    width: 373px;
+    height: 33px;
+}
+.conexao-confiavel {
+    background: #F6F6F6;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-area: img-4 text-4;
+    width: 1fr;
+    height: 507px;
+}
+.section-img-4 {
+    width: 1fr;
+    height: 252px;
+    display: flex;
+    justify-items: center;
+    padding: 20px;
+}
+.section-img-4 img{
+    width: 1fr;
+    height: 252px;;
+}
+.section-text-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.section-text-4 h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    width: 376px;
+    height: 64px;
 }
 footer {
     display: flex;
