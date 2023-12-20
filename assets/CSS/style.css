@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.img-section {
+    width: 379px;
+    height: 252px;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-header {
+    width: 1fr;
+    height: 506px;
+}
+.titulo {
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 400;
+    font-size: 18px;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    top: 10%;
+    left: 30px;
+}
+.header-content{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 3;
+    width: 381px;
+    top: 35%;
+
+}
+p {
+    color: white;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 30px;
+    width: 381px;
+    margin-bottom: 20px;
+}
+.button-abrir-discord {
+    top: 72%;
+    align-items: center;
+    background: black;
+    color: white;
+    border: none;
+}
+.butto-baixar-windows {
+    background: white;
+    color: black;
+    border: none;
+}
+.crie-seu-espaco {
+    width: 1fr;
+    height: 560px;
+}
+.facil-encontrar {
+    width: 1fr;
+    height: 507px;
+    background: #F6F6F6;
+}
+.para-poucos {
+    width: 1fr;
+    height: 560px;
+}
+.conexao-confiavel {
+    width: 1fr;
+    height: 560px;
+    background: #F6F6F6;
+}
+.section-img-1 {
+    width: 379px;
+    height: 252px;
+}
+.section-text-2 {
+    width: 1fr;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1fr;
+    height: 140px;
+    background: black;
+    
+}
+footer img {
+    width: 162px;
+    height: 30.77px;
+}
