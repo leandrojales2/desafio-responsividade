@@ -1,17 +1,33 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Luckiest Guy', cursive;
     font-family: 'Open Sans', sans-serif;
 }
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 505px) repeat(2, 507px) 560px 140px;
+    grid-template-areas: 
+        "header"
+        "crie-seu-espaco"
+        "facil-encontrar"
+        "para-poucos"
+        "conexao-confiavel"
+        "footer"
+    ;
+}
 
 header {
-    display: flex;
+    grid-area: header;
     position: relative;
     justify-content: center;
+    width: 1fr;
 }
 .img-header {
-    width: 1fr;
+    object-fit: cover;
+    width: 100%;
     height: 506px;
 }
 .titulo {
@@ -39,6 +55,7 @@ header {
 }
 .header-content p {
     color: white;
+    margin-left: 30px;
     margin-bottom: 40px;
     text-align: left;
 }
@@ -49,6 +66,7 @@ button {
     border-radius: 30px;
     width: 381px;
     height: 54px;
+    margin-left: 30px;
 }
 .button-abrir-discord {
     top: 72%;
@@ -57,30 +75,35 @@ button {
     color: white;
     border: none;
 }
-.butto-baixar-windows {
+.button-baixar-windows {
     background: white;
     color: black;
     border: none;
 }
 .crie-seu-espaco {
+    grid-area: crie-seu-espaco;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-area: img-1 text-1;
-    width: 1fr;
-    height: 573px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "section-img-1"
+        "section-text-1"
+    ;
 }
 .section-img-1 {
+    grid-area: section-img-1;
     width: 1fr;
     height: 252px;
     display: flex;
     justify-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 .section-img-1 img{
     width: 1fr;
     height: 252px;
 }
 .section-text-1 {
+    grid-area: section-text-1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -101,28 +124,32 @@ p {
     height: 88px;
 }
 .facil-encontrar {
-    background: #F6F6F6;
+    grid-area: facil-encontrar;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-area: img-2 text-2;
-    width: 1fr;
-    height: 507px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "section-img-2"
+        "section-text-2"
+    ;
+    background: #F6F6F6;
 }
 .section-img-2 {
-    width: 1fr;
-    height: 252px;
+    grid-area: section-img-2;
     display: flex;
-    justify-items: center;
-    padding: 20px;
+    justify-content: center;
+
 }
 .section-img-2 img{
     width: 1fr;
     height: 252px;
 }
 .section-text-2 {
+    grid-area: section-text-2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 10px;
 }
 .section-text-2 h2 {
     width: 379px;
@@ -131,20 +158,20 @@ p {
     font-weight: 800;
     font-size: 24px;
 }
-
 .para-poucos {
+    grid-area: para-poucos;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-area: img-3 text-3;
-    width: 1fr;
-    height: 507px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "section-img-3"
+        "section-text-3"
+    ;
 }
 .section-img-3 {
-    width: 1fr;
-    height: 252px;
     display: flex;
     justify-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 .section-img-3 img{
     width: 1fr;
@@ -154,6 +181,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 10px;
 }
 .section-text-3 h2 {
     width: 373px;
@@ -161,28 +189,31 @@ p {
 }
 .conexao-confiavel {
     background: #F6F6F6;
+    grid-area: conexao-confiavel;
+    grid-area: para-poucos;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-area: img-4 text-4;
-    width: 1fr;
-    height: 507px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "section-text-4"    
+        "section-img-4"        
+    ;
 }
 .section-img-4 {
     width: 1fr;
     height: 252px;
     display: flex;
     justify-items: center;
-    padding: 20px;
+    justify-content: center;
 }
 .section-img-4 img{
-    width: 1fr;
-    height: 252px;;
+    width: 379px;
+    height: 252px;
 }
 .section-text-4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
 }
 .section-text-4 h1 {
     font-family: 'Luckiest Guy', cursive;
@@ -191,8 +222,10 @@ p {
     line-height: 32px;
     width: 376px;
     height: 64px;
+    padding: 10px;
 }
 footer {
+    grid-area: footer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,6 +235,297 @@ footer {
     
 }
 footer img {
+    
     width: 162px;
     height: 30.77px;
+}
+
+@media screen and (min-width: 700px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 505px) repeat(2, 507px) 744px 140px;
+        grid-template-areas: 
+            "header header"
+            "crie-seu-espaco"
+            "facil-encontrar"
+            "para-poucos"
+            "conexao-confiavel"
+            "footer"
+        ;
+    }
+    header {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        width: 1fr;
+        height: 505px;
+    }
+    .titulo {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        font-family: 'Luckiest Guy', cursive;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 56px;
+        text-align: center;
+        z-index: 1;
+        color: white;
+
+    }
+    h1{
+        display: flex;
+        margin: 0;
+        width: 1fr;
+    }
+    .header-content{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        z-index: 3;
+        width: 757px;
+        height: 310px;
+        top: 35%;
+    }
+    .header-content p {
+        color: white;
+        margin-top: 40px;
+        text-align: center;
+        width: 757px;
+    }   
+    button {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21.79px;
+        border-radius: 30px;
+        width: 381px;
+        height: 54px;
+    }
+    .button-abrir-discord {
+        align-items: center;
+        background: black;
+        color: white;
+        border: none;
+        width: 281px;
+        height: 44px;
+    }
+    .button-baixar-windows {
+        background: white;
+        color: black;
+        border: none;
+        width: 205px;
+        height: 44px;
+        margin-right: 20px;
+    }
+    .crie-seu-espaco {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 505px;
+        grid-template-areas: 
+            "section-img-1 section-text-1"
+        ;
+    }
+    .section-img-1 {
+        grid-area: section-img-1;
+        width: 1fr;
+        height: 1fr;
+        justify-content: right;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .section-img-1 img{
+        width: 1fr;
+        height: 394px;
+    }
+    .section-text-1 {
+        grid-area: section-text-1;
+        display: grid;
+        grid grid-template-columns: 1fr;
+        grid-template-rows: 270px 88px;
+        grid-template-areas: 
+            "h2"
+            "p"
+        ;
+        justify-content: left;
+        align-content: center;
+        padding: 10px;
+    }
+    .section-text-1 h2 {
+        grid-area: h2;
+        width: 329px;
+        height: 270px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 54.47px;
+        margin-left: 20px;
+    }
+    .section-text-1 p {
+        grid-area: p;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21.79px;
+        margin: 20px 20px;
+
+    }
+    .facil-encontrar {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 507px;
+        grid-template-areas: 
+            "section-text-1 section-img-1"
+        ;
+    }
+    .section-img-2 {
+        grid-area: section-img-1;
+        width: 1fr;
+        height: 1fr;
+        justify-content: left;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .section-img-2 img{
+        width: 1fr;
+        height: 394px;
+    }
+    .section-text-2 {
+        grid-area: section-text-1;
+        display: grid;
+        grid grid-template-columns: 1fr;
+        grid-template-rows: 108px 88px;
+        grid-template-areas: 
+            "h2"
+            "p"
+        ;
+        justify-content: right;
+        align-content: center;
+        padding: 10px;
+    }
+    .section-text-2 h2 {
+        grid-area: h2;
+        width: 329px;
+        height: 270px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 54.47px;
+        margin-left: 20px;
+    }
+    .section-text-2 p {
+        grid-area: p;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21.79px;
+        margin: 20px 20px;
+
+    }
+    .para-poucos {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 507px;
+        grid-template-areas: 
+            "section-img-3 section-text-3"
+        ;
+    }
+    .section-img-3 {
+        grid-area: section-img-3;
+        width: 1fr;
+        height: 1fr;
+        justify-content: right;
+        padding: 10px;
+    }
+    .section-img-3 img{
+        width: 607px;
+        height: 394px;
+    }
+    .section-text-3 {
+        grid-area: section-text-3;
+        display: grid;
+        grid grid-template-columns: 1fr;
+        grid-template-rows: 108px 110px;
+        grid-template-areas: 
+            "h2"
+            "p"
+        ;
+        justify-content: left;
+        align-content: center;
+        padding: 10px;
+    }
+    .section-text-3 h2 {
+        grid-area: h2;
+        height: 108px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 54.47px;
+        margin: 20px;
+    }
+    .section-text-3 p {
+        grid-area: p;
+        margin: 40px 20px;
+
+    }
+    .conexao-confiavel {
+        background: #F6F6F6;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: 744px;
+    }
+    .section-text-4 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 200px;
+        padding: 0px;
+        margin-top: 40px;
+    }
+    .section-text-4 p {
+        width: 807px;
+        height: 44px;
+    }
+    .section-text-4 h1 {
+        width: 807px;
+        height: 80px;
+        text-align: center;
+        justify-content: center;
+    }
+    .section-img-4 {
+        width: 100%;
+        height: 510px;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    .section-img-4 img{
+        width: 784px;
+        height: 508px;
+    }
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1fr;
+        height: 140px;
+        background: black;
+        
+    }
+    footer img {
+        
+        width: 162px;
+        height: 30.77px;
+    }
 }
